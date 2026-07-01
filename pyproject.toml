@@ -1,0 +1,26 @@
+[project]
+name = "fxproxy"
+version = "0.1.0"
+description = "Standalone landing proxy over Firefox IP Protection (Mozilla free 50GB/mo)"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests>=2.28",
+    "pyfxa>=0.8",
+    "curl_cffi>=0.7",
+    "aiohttp>=3.9",
+]
+
+[project.optional-dependencies]
+# for the web panel's "浏览器登录" button (drives a real browser to sign in)
+browser = ["playwright>=1.40"]
+
+[project.scripts]
+fxproxy = "fxproxy.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["fxproxy"]

@@ -1,0 +1,8 @@
+{
+  "refresh_token": "PASTE_APPS_VPN_REFRESH_TOKEN_HERE",
+  "country": "",
+  "host": "127.0.0.1",
+  "http_port": 8080,
+  "socks_port": 1080,
+  "failover": 3
+}

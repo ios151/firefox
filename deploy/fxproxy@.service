@@ -1,0 +1,23 @@
+[Unit]
+Description=fxproxy - Firefox IP Protection landing proxy
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# Run as your own user (edit these two lines):
+User=%i
+# Refresh token can live in the config file (~/.config/fxproxy/config.json)
+# or be injected here without touching disk:
+#Environment=FXPROXY_REFRESH_TOKEN=xxxxxxxx
+# Optional: point at a specific config file
+#Environment=FXPROXY_CONFIG=/etc/fxproxy/config.json
+ExecStart=/usr/local/bin/fxproxy run --country US
+Restart=on-failure
+RestartSec=5
+# hardening
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
