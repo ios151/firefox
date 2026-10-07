@@ -41,7 +41,7 @@ Python ≥ 3.10。
 
 ```powershell
 # 1) 克隆并进目录
-git clone https://github.com/Yu9191/firefox.git
+git clone https://github.com/ios151/firefox.git
 cd firefox
 
 # 2) 安装（含依赖 aiohttp）
@@ -67,7 +67,7 @@ fxproxy web               # 或 python -m fxproxy web
 ### macOS / Linux
 
 ```bash
-git clone https://github.com/Yu9191/firefox.git && cd firefox
+git clone https://github.com/ios151/firefox.git && cd firefox
 pip install -e .
 fxproxy login --email you@example.com      # 首次：换取并保存 refresh_token
 fxproxy web                                # 打开控制面板
